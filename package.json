@@ -1,0 +1,26 @@
+{
+  "name": "tang-poetry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soontao/Tang-Poetry-Api.git"
+  },
+  "author": "Theo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Soontao/Tang-Poetry-Api/issues"
+  },
+  "homepage": "https://github.com/Soontao/Tang-Poetry-Api#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mysql": "^2.13.0",
+    "mysql-to-rest": "^1.0.6",
+    "orm": "^3.2.3",
+    "restify": "^4.3.0"
+  }
+}
