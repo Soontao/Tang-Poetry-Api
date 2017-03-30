@@ -3,8 +3,9 @@ const db = require('./db');
 const mysqltorest = require('mysql-to-rest');
 
 const server = express();
+const port = process.env.PORT || 3414;
 
 mysqltorest(server, db)
 
 if (require.main == module)
-  server.listen(8080)
+  server.listen(port)
