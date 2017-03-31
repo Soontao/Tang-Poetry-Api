@@ -12,14 +12,14 @@ mysql-to-rest的api还是比较受限，而且没有metadata，后期我会对�
 GET https://api.fornever.org/tang-poetry/poets?_limit=10,10
 ```
 
-* GET ALL poetries which content have 李白
+* GET ALL poetries which content have 李白, **YOU HAVE TO INCLUDE %25 CHARACTERS**
 
 ```text
-GET https://api.fornever.org/tang-poetry/poetry_view?content[like]=%李白%
+GET https://api.fornever.org/tang-poetry/poetry_view?content[like]=%25李白%25
 ```
 
-* GET ALL poetries written by 元稹
+* GET ALL poetries written by 元稹, and only select [id] and [title] columns
 
 ```text
-GET https://api.fornever.org/tang-poetry/poetry_view?poet_name=元稹
+GET https://api.fornever.org/tang-poetry/poetry_view?poet_name=元稹&_fields=poetry_id,title
 ```
