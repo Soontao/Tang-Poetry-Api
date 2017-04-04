@@ -29,5 +29,5 @@ GET https://api.fornever.org/tang-poetry/poetry_view?poet_name=元稹&_fields=po
 * GET a random poetry
 
 ```text
-GET https://api.fornever.org/tang-poetry/randome
+GET https://api.fornever.org/tang-poetry/random
 ```

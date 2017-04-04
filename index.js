@@ -7,9 +7,9 @@ const enhance_routes = require('./route');
 const server = express();
 const port = process.env.PORT || 3414;
 
-mysqltorest(server, db)
+server.use("/api", enhance_routes)
 
-server.use(enhance_routes)
+mysqltorest(server, db)
 
 server.use(not_found)
 
