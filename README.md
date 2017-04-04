@@ -1,6 +1,8 @@
 # 唐诗API
 
-用于查询唐诗，使用的是[mysql-to-rest](https://www.npmjs.com/package/mysql-to-rest)这个library
+用于查询唐诗，框架使用的是[mysql-to-rest](https://www.npmjs.com/package/mysql-to-rest)这个library
+
+数据来自于[全唐诗数据库](https://github.com/hxgdzyuyi/tang_poetry)
 
 mysql-to-rest的api还是比较受限，而且没有metadata，后期我会对这个library做增强
 
@@ -22,4 +24,10 @@ GET https://api.fornever.org/tang-poetry/poetry_view?content[like]=%25李白%25
 
 ```text
 GET https://api.fornever.org/tang-poetry/poetry_view?poet_name=元稹&_fields=poetry_id,title
+```
+
+* GET a random poetry
+
+```text
+GET https://api.fornever.org/tang-poetry/randome
 ```
