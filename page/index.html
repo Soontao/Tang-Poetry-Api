@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Full Tang Poetry</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-color: white;
+    }
+    
+    body>.grid {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 id="title"></h2>
+      <h3 id="poet"></h3>
+      <div id="poetry"></div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const poetry_container = document.getElementById("poetry");
+  const title_container = document.getElementById("title");
+  const poet_container = document.getElementById("poet");
+  fetch("https://api.fornever.org/tang-poetry/random")
+    .then(res => res.json())
+    .then(r => {
+      // if api changed, this code need change
+      const poetry = r[0];
+      // title, poet and poetry
+      document.title = title_container.textContent = poetry.title.replace("。", "·");
+      poet_container.textContent = poetry.poet_name;
+      poetry.content.split("。").forEach(line => {
+        var p = document.createElement('p')
+        p.textContent = line;
+        poetry_container.appendChild(p)
+      }, this);
+    })
+    .catch(err => {
+      throw err;
+    })
+
+</script>
+
+</html>
