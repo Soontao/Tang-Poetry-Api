@@ -4,3 +4,5 @@ services:
     build: .
     links: 
       - mariadb
+    ports: 
+      - "3414:3414"
