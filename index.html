@@ -5,8 +5,10 @@
   <title>Full Tang Poetry</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
-  <style type="text/css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/site.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/container.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/grid.min.css">
+  <style>
     body {
       background-color: white;
     }
@@ -39,7 +41,7 @@
       // title, poet and poetry
       document.title = title_container.textContent = poetry.title.replace("。", "·");
       poet_container.textContent = poetry.poet_name;
-      const poetry_lines = poetry.content.split(/(。|？)/);
+      const poetry_lines = poetry.content.split(/(。|？|！)/);
       const step = poetry_lines.length > 38 ? 4 : 2;
       for (var i = 0; i < poetry_lines.length - step; i += step) {
         var p = document.createElement('p')
