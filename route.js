@@ -26,7 +26,7 @@ router.get('/random', function (req, res, next) {
     if (err)
       next(err);
     else
-      res.json(result)
+      res.json(result[0])
   })
 })
 
