@@ -41,7 +41,7 @@
       // title, poet and poetry
       document.title = title_container.textContent = poetry.title.replace("。", "·");
       poet_container.textContent = poetry.poet_name;
-      const poetry_lines = poetry.content.split(/(。|？|！)/);
+      const poetry_lines = poetry.content.split(/(。|？|！|；)/);
       const step = poetry_lines.length > 38 ? 4 : 2;
       for (var i = 0; i < poetry_lines.length - step; i += step) {
         var p = document.createElement('p')
