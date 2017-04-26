@@ -1,4 +1,5 @@
-FROM node:6-onbuild
+FROM node:7-onbuild
+RUN npm i -g mysql2api
 
-EXPOSE 3414
-CMD [ "npm", "start" ]
+EXPOSE 3307
+CMD [ "mysql2api", "-c", "mysql://tang_poetry:tang_poetry@db/tang_poetry?multipleStatements=true" ]

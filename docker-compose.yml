@@ -3,6 +3,6 @@ services:
   tang-api:
     build: .
     links: 
-      - mariadb
+      - mariadb:db
     ports: 
-      - "3414:3414"
+      - "3307:3307"
