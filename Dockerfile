@@ -1,4 +1,4 @@
-FROM node:7-onbuild
+FROM node:7
 RUN npm i -g mysql2api
 
 EXPOSE 3307

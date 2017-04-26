@@ -1,8 +1,0 @@
-version: "2"
-services:
-  tang-api:
-    build: .
-    links: 
-      - mariadb:db
-    ports: 
-      - "3307:3307"
