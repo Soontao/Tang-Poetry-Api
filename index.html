@@ -37,7 +37,7 @@
     .then(res => res.json())
     .then(r => {
       // if api changed, this code need change
-      const poetry = r;
+      const poetry = r.json[0];
       // title, poet and poetry
       document.title = title_container.textContent = poetry.title.replace("。", "·");
       poet_container.textContent = poetry.poet_name;
