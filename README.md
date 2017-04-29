@@ -4,7 +4,11 @@
 
 数据来自于[全唐诗数据库](https://github.com/hxgdzyuyi/tang_poetry)
 
-mysql-to-rest的api还是比较受限，而且没有metadata，后期我会对这个library做增强
+~~mysql-to-rest的api还是比较受限，而且没有metadata，后期我会对这个library做增强~~
+
+我封装了一个[mysql to api](https://github.com/Soontao/mysql-api)的库，可以轻松把mysql数据库暴露成rest api，这个库使用了mysql to rest以及我自己写的[mysql metadata](https://github.com/Soontao/mysql-metadata)
+
+所以这个API现在只是run了一个mysql2api的实例
 
 ## USAGE
 
